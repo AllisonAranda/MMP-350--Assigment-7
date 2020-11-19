@@ -1,0 +1,96 @@
+<!-- This is my profile.html file for the user's profile page -->
+<!DOCTYPE html>
+<html>
+<head>
+      <title>user profile</title>
+      
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <h1><center><img src="images/LogoHazel.png"></center></h1> 
+    <!-- Storage  SDK -->
+
+<!-- You don't need to load your avatar.png from the database if you have it already in your github. -->
+    <!-- <script src="gs://hazel-69ca8.appspot.com/avatar.png"></script> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+<!-- You forgot to add the storage SDK-->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDK9exQFIJN27KhujSqQnEK5I2LLC9pejM",
+    authDomain: "hazel-69ca8.firebaseapp.com",
+    databaseURL: "https://hazel-69ca8.firebaseio.com",
+    projectId: "hazel-69ca8",
+    storageBucket: "hazel-69ca8.appspot.com",
+    messagingSenderId: "360420636221",
+    appId: "1:360420636221:web:37644140a405291b479c54",
+    measurementId: "G-ND4QEVXEHF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+</script>
+    
+    </head>
+
+<body>
+<div id="container">
+    <div id="container">
+        <div id="heading">
+            <h1>Profile Page</h1>
+            <h4>MMP 350 Fall 2020</h4>
+        </div>
+        <!-- elements to let users login -->
+        <div id="login">
+            <input type="text" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button id="login-button">Login</button>
+            <p id="login-message"></p>
+            <p><a href="create.html">Create a new account</a>.</p>
+        </div>
+        <!-- elements in case user is logged in -->
+        <div id="user-info">
+            Hello
+            <div id ="user-name"></div>
+            <button id="logout-button">Log Out</button>
+        </div>
+
+        <div id="profile">
+            <input id="profile-display-name" placeholder="Update my username">
+            <textarea id="profile-bio" placeholder="Add your bio"></textarea>
+            <button id="update-profile">Update Profile</button>
+        </div>
+    </div>
+    
+    <right><img id="profile-image" src="images/avatar.png"> </right>  
+    
+<div>
+    <p>Add a profile image</p>
+    <input id="profile-image-file" type="file" name="profile-img" accept="image/gif,image/jpeg, image/png">
+    <button id="submit-image">Upload a new profile image</button>
+    </div>  
+    
+    
+</div>
+    <!-- Let's add the helpers and create.js file -->
+    <script src="js/helpers.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+
+    
+ 
+    
+</body>    
+    
+</html>
+       
